@@ -25,7 +25,11 @@ const Register = () => {
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    // TODO
+    if (state.name === "" || state.email === "" || state.password === "") {
+      setErrorMsg("All the fields are required.")
+    } else {
+      setSuccessMsg("You have successfully registered")
+    }
   };
 
   return (
